@@ -1,0 +1,11 @@
+version: '3'
+services:
+    app-react:
+        image: node:latest
+        ports:
+            - "3000:3000"
+        volumes:
+            - .:/usr/react-docker            
+        working_dir: /usr/react-docker
+        command: bash -c "npm install && npm start"
+#        command: bash -c "npx create-react-app my-app && cd my-app && npm start"
